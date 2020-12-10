@@ -7,6 +7,9 @@ import { MaterialModule } from './material.module';
 import { MapaComponent } from './components/mapa/mapa.component';
 
 import { AgmCoreModule } from '@agm/core';
+import { MapaEditarComponent } from './components/mapa/mapa-editar.component';
+
+import { ReactiveFormsModule } from '@angular/forms';
 
 // google maps api key : AIzaSyB4g5VnplPVtCT6mwn0SrRamUxV7Ov1Hxk
 
@@ -14,7 +17,8 @@ import { AgmCoreModule } from '@agm/core';
 @NgModule({
   declarations: [
     AppComponent,
-    MapaComponent
+    MapaComponent,
+    MapaEditarComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +26,8 @@ import { AgmCoreModule } from '@agm/core';
     MaterialModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyB4g5VnplPVtCT6mwn0SrRamUxV7Ov1Hxk'
-    })
+    }),
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
